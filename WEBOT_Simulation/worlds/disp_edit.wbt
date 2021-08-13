@@ -1,0 +1,250 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  info [
+    "Unviversal Robot UR3e, UR5e and UR10e grasping cans using Robotiq 3F grippers."
+  ]
+  title "Universal Robot"
+  basicTimeStep 16
+  physicsDisableAngularThreshold 0.1
+  coordinateSystem "NUE"
+  contactProperties [
+    ContactProperties {
+      bounce 0.1
+    }
+    ContactProperties {
+      material1 "slope"
+      coulombFriction [
+        0.5
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.2060875929742286 0.9550396001597752 0.21313673111114637 4.617780911167915
+  position -7.923408078980776 3.2590138033572136 0.33972116028852295
+  exposure 1.7
+}
+TexturedBackground {
+  texture "factory"
+}
+Floor {
+  size 17 5
+  appearance ThreadMetalPlate {
+  }
+}
+Portal {
+  controller "disp_cont"
+  supervisor TRUE
+}
+Wrench {
+  translation -1.2388593533392416 0.6988309200831823 0.5886001258884074
+  rotation 3.9550155836028346e-05 0.9999999990666352 -1.7392964298396323e-05 2.0943949889583418
+}
+Wall {
+  translation -2.835 0 -2.58
+  size 9 2.4 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 2 1
+    }
+  }
+}
+Wall {
+  translation 4.375 0 -2.58
+  name "wall(2)"
+  size 5 2.4 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 2 1
+    }
+  }
+}
+Wall {
+  translation 1.77 1.2 -2.58
+  name "wall(3)"
+  size 0.21 1.2 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 0.1 0.7
+    }
+  }
+}
+Wall {
+  translation 0 0 2.42
+  name "wall(1)"
+  size 15 2.4 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 2 1
+    }
+  }
+}
+Transform {
+  translation 1.77 1.05 -2.68
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.23 0.3 0.01
+      }
+    }
+  ]
+}
+SolidBox {
+  translation -0.135 0.305 0.0323
+  size 1.5 0.61 0.4
+  appearance GalvanizedMetal {
+  }
+}
+SolidBox {
+  translation 1.015 0.45 0.0323
+  name "box(5)"
+  size 0.8 0.91 0.4
+  appearance GalvanizedMetal {
+  }
+}
+SolidBox {
+  translation 0.8 0.819996 -0.329556
+  rotation 1 0 0 1.047197
+  name "box(6)"
+  size 0.3 0.5 0.02
+  contactMaterial "slope"
+  appearance GalvanizedMetal {
+  }
+}
+SolidBox {
+  translation 0.96 0.837316 -0.339556
+  rotation -0.4472131236215756 0.7745972141192264 0.4472131236215756 -1.823476307179586
+  name "box(7)"
+  size 0.05 0.5 0.02
+  appearance GalvanizedMetal {
+  }
+}
+SolidBox {
+  translation 0.64 0.837316 -0.339556
+  rotation -0.4472131236215756 0.7745972141192264 0.4472131236215756 -1.823476307179586
+  name "box(8)"
+  size 0.05 0.5 0.02
+  appearance GalvanizedMetal {
+  }
+}
+SolidBox {
+  translation 0.64 0.583496 -0.239196
+  rotation 0.6947470600351803 -0.1861570160863869 -0.6947460600350939 2.773492
+  name "box(9)"
+  size 0.05 0.5 0.02
+  appearance GalvanizedMetal {
+  }
+}
+SolidBox {
+  translation 0.96 0.583496 -0.239196
+  rotation 0.6947470600351803 -0.1861570160863869 -0.6947460600350939 2.773492
+  name "box(10)"
+  size 0.05 0.5 0.02
+  appearance GalvanizedMetal {
+  }
+}
+SolidBox {
+  translation 1.77 0.375 0.11
+  rotation 0 1 0 3.1415919999999997
+  name "box(2)"
+  size 0.2 0.75 0.18
+  appearance CorrugatedMetal {
+    textureTransform TextureTransform {
+      scale 0.7 0.7
+    }
+  }
+}
+SolidBox {
+  translation 1.77 0.375 2.28
+  rotation 0 1 0 3.1415919999999997
+  name "box(4)"
+  size 0.2 0.75 0.18
+  appearance CorrugatedMetal {
+    textureTransform TextureTransform {
+      scale 0.7 0.7
+    }
+  }
+}
+SolidBox {
+  translation 1.77 0.375 -2.43
+  rotation 0 1 0 3.1415919999999997
+  name "box(3)"
+  size 0.2 0.75 0.18
+  appearance CorrugatedMetal {
+    textureTransform TextureTransform {
+      scale 0.7 0.7
+    }
+  }
+}
+DEF robot UR3e {
+  translation 1.30296 0.91 -0.079391
+  rotation 1 0 0 -1.5707963071795863
+  controller "original"
+  controllerArgs [
+    "3"
+  ]
+  supervisor TRUE
+  selfCollision FALSE
+  toolSlot [
+    DEF sett Robotiq3fGripper {
+    }
+    DistanceSensor {
+      translation 0 0.1 0
+      rotation 0 0 1 1.570796
+    }
+  ]
+}
+ConveyorBelt {
+  translation 1.77 0.75 -2.55
+  rotation 0 1 0 -1.5707973071795864
+  name "conveyor belt(2)"
+  size 10 0.15 0.15
+  appearance CorrugatedMetal {
+    textureTransform TextureTransform {
+      scale 6 3.1
+    }
+  }
+  borderHeight 0
+  speed 0.2
+}
+PlasticCrate {
+  translation 0.714865 0.009773 -0.679999
+  rotation -0.010082685077513644 0.00044226691444148084 -0.9999490706339019 -3.894576715362128e-05
+  size 0.6 0.4 0.45
+  mass 1
+}
+DEF TARGET Can {
+  translation 1.7699993568036272 0.9610583173271458 -2.0139816552952476
+  rotation -0.9999999999751074 7.048319708367246e-06 3.263288741339679e-07 3.1785472754545954e-05
+  name "can(14)"
+}
+Can {
+  translation 1.769999356803819 0.9610225283334105 -3.1439817284854654
+  rotation -0.9999999999752435 7.028986100573065e-06 3.2633003445005227e-07 3.178547275908846e-05
+  name "can(15)"
+}
+Can {
+  translation 1.7699993568039754 0.9609940238251529 -4.043981785929746
+  rotation -0.9999999999754803 6.995224329325255e-06 3.263320090809908e-07 3.1785472762596305e-05
+  name "can(16)"
+}
+Can {
+  translation 1.7699993568041257 0.960965519316873 -4.943981844070506
+  rotation -0.9999999999756046 6.9774358254825286e-06 3.2632490254637555e-07 3.178547276602943e-05
+  name "can(17)"
+}
+Can {
+  translation 1.7699993568042869 0.9609370148088322 -5.843981894669349
+  rotation -0.9999999999757624 6.95478592902028e-06 3.263324273540117e-07 3.1785472769873734e-05
+  name "can(18)"
+}
+Can {
+  translation 1.769999356804431 0.9609085103008973 -6.743981941920235
+  rotation -0.999999999975943 6.928731722071239e-06 3.263329966836605e-07 3.178547277307788e-05
+  name "can(19)"
+}

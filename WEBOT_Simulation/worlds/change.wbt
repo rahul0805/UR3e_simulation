@@ -1,0 +1,267 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  info [
+    "Unviversal Robot UR3e, UR5e and UR10e grasping cans using Robotiq 3F grippers."
+  ]
+  title "Universal Robot"
+  basicTimeStep 16
+  physicsDisableAngularThreshold 0.1
+  coordinateSystem "NUE"
+  contactProperties [
+    ContactProperties {
+      bounce 0.1
+    }
+    ContactProperties {
+      material1 "slope"
+      coulombFriction [
+        0.5
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.369687251731448 -0.8188345025677397 -0.4391371008146446 1.9418676898316576
+  position -3.4431185550108365 6.276571648870336 -1.2192135102105608
+  exposure 1.7
+}
+TexturedBackground {
+  texture "factory"
+}
+Floor {
+  size 17 5
+  appearance ThreadMetalPlate {
+  }
+}
+DEF can1 Can {
+  translation 0.843761 0.95064 -0.048263
+}
+SquareManhole {
+  translation 0.560459 -0.03 1.782
+  rotation 0 1 0 -1.5707963071795863
+}
+Table {
+  translation 3.097723 0 -2.013972
+  size 1.8 0.7 0.8
+  feetSize 0.05 0.05
+  trayAppearance PBRAppearance {
+    baseColor 0.926 0.912 0.698
+    roughness 0.8
+    metalness 0
+  }
+  legAppearance BrushedAluminium {
+    colorOverride 0.333 0.341 0.325
+  }
+}
+WoodenChair {
+  translation 2.921084 0 -1.648051
+  rotation 0 1 0 -2.8797933071795865
+}
+Monitor {
+  translation 2.520237 0.7 -2.108887
+  rotation 0 1 0 -2.8797933071795865
+}
+Keyboard {
+  translation 2.594212 0.7 -1.8802
+  rotation 0 1 0 -2.8797933071795865
+}
+DesktopComputer {
+  translation 2.331033 0 -2.125086
+  rotation 0 1 0 -3.1415923071795864
+}
+ComputerMouse {
+  translation 2.94663 0.7 -1.914183
+  rotation 0 1 0 2.879793
+  mass 0
+}
+BeerBottle {
+  translation 0.663761 0.912902 -0.088263
+}
+Table {
+  translation -1.419911 0 0.81333
+  rotation 0 1 0 -1.5707963071795863
+  name "table(1)"
+  size 1.8 0.7 0.8
+  feetSize 0.05 0.05
+  trayAppearance PBRAppearance {
+    baseColor 0.926 0.912 0.698
+    roughness 0.8
+    metalness 0
+  }
+  legAppearance BrushedAluminium {
+    colorOverride 0.333 0.341 0.325
+  }
+}
+Wrench {
+  translation -1.2388593558384369 0.6988309205907803 0.5886001301470539
+  rotation 3.9550177366069496e-05 0.9999999990666336 -1.739299183947462e-05 2.094395025751058
+}
+Hammer {
+  translation -1.6039335003799486 0.7125938771586642 0.3593450398982548
+  rotation 0.421442898506651 0.0001872468868636793 0.9068549212729212 0.010990256732596328
+}
+PlatformCart {
+  translation 0.9276026335978539 -0.001503778877963463 -1.793294408267816
+  rotation 0.00032958043375701533 0.9999999447238136 -4.392160411274955e-05 -2.879793297092603
+}
+LeverValve {
+  translation -0.73 0.502 0.83
+}
+Radiator {
+  translation 0.528902 0.33 -2.341308
+  rotation 0 1 0 -1.5707963071795863
+  numberOfFins 16
+}
+WoodenPalletStack {
+  translation 2.8 0 1.55
+  rotation 0 -1 0 1.5708
+  palletNumber 5
+  palletSize 0.8 0.11 1
+}
+PlasticCrate {
+  translation 1.77 0 -0.45
+}
+Cabinet {
+  translation -0.4 0 -2.47
+  name "cabinet(1)"
+  layout [
+    "RightSidedDoor (1, 1, 1, 5, 1.5)"
+    "LeftSidedDoor (2, 1, 2, 5, 1.5)"
+  ]
+  primaryAppearance GlossyPaint {
+    baseColor 0.729 0.741 0.713
+  }
+  secondaryAppearance GlossyPaint {
+    baseColor 0.729 0.741 0.713
+  }
+}
+CardboardBox {
+  translation -1.21 0.3 -2.18
+}
+CardboardBox {
+  translation -1.198389 0.75 -2.100678
+  rotation 0 1 0 2.094395
+  name "cardboard box(1)"
+  size 0.4 0.3 0.6
+}
+Wall {
+  translation -2.835 0 -2.58
+  size 9 2.4 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 2 1
+    }
+  }
+}
+Wall {
+  translation 4.375 0 -2.58
+  name "wall(2)"
+  size 5 2.4 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 2 1
+    }
+  }
+}
+Wall {
+  translation 1.77 1.2 -2.58
+  name "wall(3)"
+  size 0.21 1.2 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 0.1 0.7
+    }
+  }
+}
+Wall {
+  translation 0 0 2.42
+  name "wall(1)"
+  size 15 2.4 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 2 1
+    }
+  }
+}
+Transform {
+  translation 1.77 1.05 -2.68
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.23 0.3 0.01
+      }
+    }
+  ]
+}
+SolidBox {
+  translation -0.135 0.165 0.0323
+  size 1.5 0.61 0.4
+  appearance GalvanizedMetal {
+  }
+}
+SolidBox {
+  translation 1.015 0.46 0.0323
+  name "box(5)"
+  size 0.8 0.91 0.4
+  appearance GalvanizedMetal {
+  }
+}
+SolidBox {
+  translation 1.77 0.375 0.11
+  rotation 0 1 0 3.1415919999999997
+  name "box(2)"
+  size 0.2 0.75 0.18
+  appearance CorrugatedMetal {
+    textureTransform TextureTransform {
+      scale 0.7 0.7
+    }
+  }
+}
+SolidBox {
+  translation 1.77 0.375 2.28
+  rotation 0 1 0 3.1415919999999997
+  name "box(4)"
+  size 0.2 0.75 0.18
+  appearance CorrugatedMetal {
+    textureTransform TextureTransform {
+      scale 0.7 0.7
+    }
+  }
+}
+SolidBox {
+  translation 1.77 0.375 -2.43
+  rotation 0 1 0 3.1415919999999997
+  name "box(3)"
+  size 0.2 0.75 0.18
+  appearance CorrugatedMetal {
+    textureTransform TextureTransform {
+      scale 0.7 0.7
+    }
+  }
+}
+FireExtinguisher {
+  translation -0.7577098699481831 -0.0023544000000037535 -1.7900000153023843
+  rotation -0.001545951545638739 0.9999988047850211 -2.150226750380091e-05 -2.8797936153547976
+}
+UR3e {
+  translation 1.30296 0.91 0.040609
+  rotation 1 0 0 -1.5707963071795863
+  controller "ure_can_grasper"
+  controllerArgs [
+    "3"
+  ]
+  supervisor TRUE
+  selfCollision FALSE
+  toolSlot [
+    DEF Gripper Robotiq3fGripper {
+    }
+    DistanceSensor {
+      translation 0 0.1 0
+      rotation 0 0 1 1.570796
+    }
+  ]
+}
